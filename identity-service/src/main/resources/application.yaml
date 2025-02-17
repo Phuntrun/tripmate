@@ -1,0 +1,39 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: tripmate-identity-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/tripmate
+    username: phuongtv
+    password: TVPhuong260803@
+  jpa:
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: truongvanphuong.gv2003@gmail.com
+    password: lqvj cywk pgwx eikr
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  jwt:
+    ##variable
+      signkey: +m+ZKQp78ZgTteelv5VswE1Xlaj6NhOWEP3f25YrdgZYg89C7RGBqRpD94qYEWVg
+      valid-duration: 3600
+      refreshable-duration: 36000
+openapi:
+  service:
+    api-docs: api-service
+    server: http://localhost:8080
+    title: Tripmate API service
+    description: Tripmate API
+    version: 1.0.0
